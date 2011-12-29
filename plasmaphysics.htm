@@ -1,0 +1,196 @@
+<html>
+<head> <title>Plasma Physics Formulae</title>
+<link rel="shortcut icon" href="icon2.ico" >
+</head>
+
+<body>
+
+<h4>Plasma Physics Formulae</h4>
+	  <li><A HREF="#plasma">Electron Plasma Frequency</A><BR>
+	  <li><A HREF="#cyclotron">Electron Cyclotron Frequency</A><BR>
+	  <li><A HREF="#thermal">Electron Thermal Speed</A><br>
+	  <li><A HREF="#debye">Debye Length</A><BR>
+	  <li><A HREF="#alfven">Alfven Speed</A><br>
+	  <li><A HREF="#beta">Plasma &beta;</A><br>
+	  <li><A HREF="#rates">Coulomb Collision Rates</A><br>
+	  <li><A HREF="#gas">Neutral Density</A><br>
+	  <!-- A class="center"  HREF="#coulomb">Coulomb Logarithm and Collision (Slowing Down) Frequencies</A --><BR><br></h4>
+
+
+
+	  <br>
+	    <A class="center" NAME="plasma"></A><h5>Electron Plasma Frequency (<i>&omega;<sub>pe</sub></i>)</h5>
+		<form>
+	    <table border>
+	    <caption>Enter Variables:</caption>
+	    <tr><td>Electron density (cm<sup>-3</sup>):</td><td><input type="text" id="ed"></td></tr></table>
+	    <input type="button" value="Calculate" onclick="javascript:plasma()">
+	     <input type="button" value="Reset Form" onclick="javascript:reset()">
+	    <table border><tr><td>Plasma Frequency:</td><td><input type="text" id="plasmaf" readonly size="40"></td></tr>
+	    <tr><td>Collisionless Skin Depth:</td><td><input type="text" id="collision" readonly></td></tr></table>
+	    </form><br><a href="index.htm"> Return to Tools and Links </a>
+<br><br><br>
+
+	     <br>
+	    <A class="center" NAME="cyclotron"></A><h5>Electron Cyclotron Frequency (<i>&Omega;<sub>ce</sub></i>)</h5>
+		<form>
+	      <table border>
+			<caption>Enter Variables:</caption>
+			<tr><td>Magnetic field (G):</td><td><input type="text" id="B"></td></tr>
+		  </table>
+	      <input type="button" value="Calculate" onclick="javascript:cyclotron()">
+	      <input type="button" value="Reset Form" onclick="javascript:reset()">
+	      <table border><tr><td>Electron Cyclotron Frequency:</td><td><input type="text" id="ecf" readonly size="33"></td></tr>
+		  </table>
+	    </form><br><a href="index.htm"> Return to Tools and Links </a>
+		<br><br><br>
+
+	    <br>
+	    <A class="center" NAME="thermal"></A><h5>Electron Thermal Speed <i>(T<sub>eV</sub>/511000)<sup>1/2</sup>c</i></h5>
+		<form>
+	      <table border>
+			<caption>Enter Variables:</caption>
+			<tr><td>Electron temperature (eV):</td><td><input type="text" id="etemp"></td></tr></table>
+	      <input type="button" value="Calculate" onclick="javascript:thermal()">
+	      <input type="button" value="Reset Form" onclick="javascript:reset()">
+	      <table border>
+			<tr><td>Electron Thermal Speed:</td><td><input type="text" id="speed" readonly></td></tr>
+		  </table>
+	    </form><br><a href="index.htm"> Return to Tools and Links </a>
+		<br><br><br>
+
+	    <br>
+	    <A class="center" NAME="debye"></A><h5>Debye Length (<i>&lambda;<sub>D</sub></i>)</h5>
+		<form>
+	      <table border>
+			<caption>Enter Variables:</caption>
+			<tr><td>Electron density (cm<sup>-3</sup>):</td><td><input type="text" id="ded"></td></tr>
+			<tr><td>Plasma temperature (eV):</td><td><input type="text" id="temp"></td></tr>
+		  </table>
+	      <input type="button" value="Calculate" onclick="javascript:debye()">
+	      <input type="button" value="Reset Form" onclick="javascript:reset()">
+	      <table border><tr><td>Debye length:</td><td><input type="text" id="debyea" readonly></td></tr>
+		  </table>
+	    </form><br><a href="index.htm"> Return to Tools and Links </a>
+		<br><br><br>
+
+	    <br>
+	    <A class="center" NAME="alfven"></A><h5>Alfven Speed (<i>v<sub>A</sub></i>)</h5>
+		<form>
+	      <table border>
+			<caption>Enter Variables:</caption>
+			<tr><td>Magnetic field (G):</td><td><input type="text" id="mag"></td></tr>
+			<tr><td>Electron density (cm<sup>-3</sup>):</td><td><input type="text" id="aed"></td></tr>
+			<tr><td>Atomic weight:</td><td><input type="text" id="aw"></td></tr>
+		  </table>
+	      <input type="button" value="Calculate" onclick="javascript:alfven()">
+	      <input type="button" value="Reset Form" onclick="javascript:reset()">
+	      <table border><tr><td>Alfven Speed:</td><td><input type="text" id="alfvens" readonly></td></tr></table>
+	    </form><br><a href="index.htm"> Return to Tools and Links </a>
+		<br><br><br>
+
+	     <br>
+	     <A class="center" NAME="beta"></A><h5>Plasma <i>&beta;</i> (with electron pressure only)</h5>
+		 <form>
+	     <table border>
+	     <caption>Enter Variables:</caption>
+	     <tr><td>Magnetic field (G):</td><td><input type="text" id="gauss"></td></tr>
+	     <tr><td>Electron density (cm<sup>-3</sup>):</td><td><input type="text" id="bed"></td></tr>
+	     <tr><td>Electron temperature (eV):</td><td><input type="text" id="ptemp"></td></tr></table>
+	     <input type="button" value="Calculate" onclick="javascript:beta()">
+	      <input type="button" value="Reset Form" onclick="javascript:reset()">
+	      <table border><tr><td>Plasma &beta;:</td><td><input type="text" id="pb" readonly></td></tr></table>
+	      </form><br><a href="index.htm"> Return to Tools and Links </a><br><br>
+
+
+	     <A class="center" NAME="rates"></A><h5>Coulomb Collision Rates (for Maxwellians with <i>T<sub>i</sub></i> &le; <i>T<sub>e</sub></i> )</h5>
+		 <form>
+         <table border>
+             <caption>Enter Variables:</caption>
+             <tr><td>Electron density (cm<sup>-3</sup>):</td><td><input type="text" id="nn"></td></tr>
+			 <tr><td>Electron temperature T<sub>e</sub> (eV):</td><td><input type="text" id="T_e"></td></tr>
+             <tr><td>Ion charge (Z):</td><td><input type="text" id="z"></td></tr>
+             <tr><td>Ion atomic mass A:</td><td><input type="text" id="mu"></td></tr>
+	     <tr><td>Ion temperature T<sub>i</sub> (eV):</td><td><input type="text" id="T_i"></td></tr>
+		 </table>
+             <input type="button" value="Calculate" onclick="javascript:rates()">
+	      <input type="button" value="Reset Form" onclick="javascript:resetrates()">
+	      <table border>
+              <tr><td><i>e-i</i> Coulomb logarithm</td><td><input type="text" id="lambda_ei" readonly></td></tr>
+	      <tr><td><i>e-i</i> (and <i>e-e</i>) collision frequency &nu<sub>e</sub> (s<sup>-1</sup>):</td><td><input type="text" id="nu_e" readonly></td></tr>
+              <tr><td><i>i-i</i> Coulomb logarithm</td><td><input type="text" id="lambda_ii" readonly></td></tr>
+              <tr><td><i>i-i</i> collision frequency &nu<sub>i</sub> (s<sup>-1</sup>):</td><td><input type="text" id="nu_i" readonly></td></tr>
+              <tr><td>Electrical conductivity &sigma; (s<sup>-1</sup>):</td><td><input type="text" id="sigma" readonly></td></tr>
+              <tr><td>Electrical resistivity &eta; (&Omega;-cm):</td><td><input type="text" id="eta" readonly></td></tr>
+		  </table>
+	     </form>
+			 (Electrical resistivity of copper at 300K = 1.7 &times; 10<sup>-6</sup> &Omega;-cm)
+
+
+	    <!-- hr><br -->
+	   <!-- A class="center" NAME="coulomb"></A><h3>Coulomb Logarithm (&Lambda;) and Collision (Slowing Down) Frequencies</h3>
+	   <table border>
+	   <form>
+	   <caption>Enter Variables:</caption>
+	   
+	   <tr><td>Electron density (cm<sup>-3</sup>):</td><td><input type="text" id="ncoulomb"></td></tr>
+	   <tr><td>Temperature of electron (eV):</td><td><input type="text" id="Tcoulomb"></td></tr>
+	   <tr><td>Temperature of ion (eV):</td><td><input type="text" id="Ti"></td></tr>
+	   <tr><td>Charge of ion (Z):</td><td><input type="text" id="Zcoulomb"></td></tr>
+	   <tr><td>Atomic number of ion:</td><td><input type="text" id="atomic"><td></tr>
+	   </table>
+	   **This calculation assumes a single ion species**<br>
+	   <input type="button" value="Calculate" onclick="javascript:calculate()">
+	   <input type="button" value="Reset Form" onclick="javascript:reset()">
+	   
+
+	   <table border>
+	   <tr><td></td><td>Coulomb Logarithms:</td><td>Collision Frequencies:</td></tr>
+	   <tr><td>Electron-ion:<td><input type="text" id="ei" readonly></td>
+                                <td><input type="text" id="ei2" readonly></td></tr>
+	   <tr><td>Electron-electron:</td><td><input type="text" id="ee" readonly></td>
+                                          <td><input type="text" id="ee2" readonly</td></tr>
+	   <tr><td>Ion-ion:</td><td><input type="text" id="ii" readonly></td>
+	                        <td><input type="text" id="ii2" readonly</td></tr></table>
+	    </form><br -->
+
+
+
+
+	   <br><br><a href="index.htm"> Return to Tools and Links </a><br><br>
+
+	   <br>
+	   <A class="center" NAME="gas"></A><h5>Neutral Density</h5>
+	   <form>
+		 <table border>
+	       <caption>Enter Variables:</caption>
+	       <tr><td><select id="choice">
+				 <!-- tr><td>Gas pressure (torr):</td><td><input type="text" id="gaspress"></td></tr -->
+	             <option value="Ptorr" size="8">Pressure (torr):</option>
+	             <option value="PPa" size="8">Pressure (Pa):</option>
+		     </select></td>   
+			 <td><input type="text" size="8" id="gaspress"></td></tr>
+	       <tr><td>Gas temperature (K):</td><td><input type="text" id="gastemp"></td></tr>
+		 </table>
+		 
+		 <input type="button" value="Calculate" onclick="javascript:gas()">
+		 <input type="button" value="Reset Form" onclick="javascript:reset()">
+		 <table border>
+		   <tr><td>Neutral density:</td><td><input type="text" id="nneutral" readonly></td></tr>
+		 </table>
+	   </form>
+	   Loschmidt's number: At 1 atm (760 torr, 101,325 Pa) and 273K = 2.687 &times; 10<sup>19</sup> cm<sup>-3</sup>
+	   <br><br><a href="index.htm"> Return to Tools and Links </a>
+	   <br><br><br>
+	   
+
+
+	   <script type="text/javascript" src="scripts/physics2.js">
+	   </script>
+	   <address>
+		 Copyright 2005-2007 by Thomas Hughes and Fiona Hughes. <br>
+	   </address>
+	   
+</body>
+</html> 
+

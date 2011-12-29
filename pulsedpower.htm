@@ -1,0 +1,70 @@
+<html>
+<head> <title>Pulsed Power Formulae</title>
+<link rel="shortcut icon" href="icon2.ico" >
+</head>
+
+<body>
+
+<h4>Pulsed Power Formulae</h4>
+<ul><li><a href="#tli">Transmission Line Impedance</a>
+		 <li><a href="#pflux">Power Flux</a>
+		   	    </ul><br><br>
+
+
+<a name="tli"></a><h5>Transmission Line Impedance</h5><table border>
+       <caption>Choose Coaxial or Radial and <br>Enter Variables:</caption>
+              <form name="form">
+
+              <tr><td colspan="2"><input type="button" value="Coaxial" onclick="javascript:coaxial()"></input><input type="button" value="Radial" onclick="javascript:radial()"></input></td></tr>
+
+              <tr><td><input type="text" id="info1" readonly></input></td> <td><input type="text"  size="8" id="num1"></input>cm</td></tr>
+	      <tr><td><input type="text" id="info2" readonly></input></td> <td><input type="text" size="8" id="num2"></input>cm</td></tr>
+	   
+	      
+	      <!-- tr><td colspan="2">Radial<input type="radio" id="type" name="type" value="radial" onselect="javascript:select(radial)"></td></tr>
+	      <tr><td>Radius:</td> <td><input type="text" size="8" id="ro" readonly></input>cm</td></tr>
+	      <tr><td>Width:</td> <td><input type="text" size="8" id="wo" readonly></input>cm</td></tr>
+	      <tr></tr -->
+
+	      <tr><td>Relative permittivity:</td> <td><input type="text" size="8" id="permit"></input></td></tr>
+	      <tr><td>Relative permeability:</td> <td><input type="text" size="8" id="permea"></input></td></tr>
+	      <tr><td>Impedance:</td>             <td><input type="text" id="imped" readonly></input></td></tr>
+	      
+	      </table>
+	      <input type="button" value="Calculate" onclick="javascript:tli()"></input>
+	      <input type="button" value="Reset Form" onclick="javascript:resettli()"></input></form><br><br><a href="index.htm"> Return to Tools and Links </a>
+<br><br><br>
+
+
+<a name="pflux"></a><h5>Power Flux</h5>
+<table border>
+       <caption>Enter Variables:</caption>
+              <form name="form">
+	      <tr><td><select id="choice">
+	              <option value="E">Electric Field Amplitude (V/m):</option>
+		      <option value="P">Poynting Flux (watts/m^2):</option> </select></td>   
+		  <td><input type="text" id="num"></input></td></tr>
+
+	      <tr><td><input type="text" id="result1" readonly></input></td> 
+	          <td><input type="text" id="result2" readonly></input></td></tr>
+              <tr><td><input type="text" id="extra1" readonly></input></td>
+	          <td><input type="text" id="extra2" readonly></input></td></tr>
+             
+	      </table>
+	      <input type="button" value="Calculate" onclick="javascript:pflux()"></input>
+	      <input type="button" value="Reset Form" onclick="javascript:resetpflux()"></input></form><br>
+	<br><a href="index.htm"> Return to Tools and Links </a>
+<br><br>
+
+
+
+<script type="text/javascript" src="scripts/pulsedpower.js">
+
+</script>
+
+
+<address>
+Copyright 2005-2007 by Thomas Hughes and Fiona Hughes. <br>
+</address>
+
+
