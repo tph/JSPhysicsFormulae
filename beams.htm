@@ -1,0 +1,124 @@
+<html>
+<head> <title>Beams Formulae</title>
+<link rel="shortcut icon" href="icon2.ico" >
+</head>
+
+<body>
+
+<h4>Beams Formulae</h4>
+<ul><li><a href="#scat">Moli&egrave;re Scattering</a>
+		 <li><a href="#emit">Transverse Emittance</a>
+		<li><a href="#bbu">Beam Breakup Instability</a>
+		   	    </ul><br><br>
+
+
+<a name="scat"></a><h5>Moli&egrave;re Scattering</h5><table border>
+       <table border>
+	<caption>Enter Variables:</caption>
+		<form name="form" action="javascript:calculate">
+		 
+		   <tr><td>Thickness:</td>
+		        <td><input type="text" id="thickness" name="thickness" size="11"></input></td>
+			<td><select id="units" name="units">
+                               <option value="mil"> mil </option>
+			       <option value="mm"> mm </option> </select></td></tr>
+		   <tr><td>Element:</td>
+			<td colspan="2"><select id="element" name="element">
+			       <option value="1"> Aluminum </option>
+			       <option value="2"> Beryllium </option>
+			       <option value="3"> Calcium </option>
+			       <option value="4"> Iron </option>
+			       <option value="5"> Kapton </option>
+			       <option value="6"> Nickel </option>
+			       <option value="7"> Tantalum </option>
+			       <option value="8"> Titanium </option>
+			       <option value="9"> Tungsten </option>
+			</select></td></tr>
+		   <tr><td>Energy</td>
+		        <td><input type="text" id="gamma" name="gamma" size="11"></input></td><td>MeV</td></tr></table>
+		   <input type="button" value="Calculate" onclick="javascript:scat()"></input>
+		   <input type="button" value="Reset Form" onclick="javascript:resetscat()"></input>
+		
+
+	<table border>
+	        <caption> Results for <input type="text" id="cap1" readonly size="5"></input>
+                  <input type="text" id="cap2" readonly size="4"></input> foil of <input type="text" id="cap3" readonly size="8"></input>: </caption>
+		<!-- tr><td>gamma-beta:</td><td><input type="text" id="gb" readonly></input></td></tr -->
+		<tr><td>Thermal momentum for Lsp:</td><td><input type="text" id="thermal" readonly></input></td></tr>
+		<tr><td>Number of collisions:</td><td><input type="text" id="number" readonly></input></td></tr>
+		<tr><td>Moli&egrave;re 2D <i>&theta;<sub>rms</sub></i>:</td><td><input type="text" id="moliere" readonly></input></td></tr>
+		<!-- tr><td>Thin target 2D theta_rms:</td><td><input type="text" id="thin" readonly></input></td></tr -->
+	</table></form>
+        <br><a href="index.htm"> Return to Tools and Links </a>
+<br><br><br>
+
+
+
+<a name="emit">
+<h5>Transverse Emittance</h5></a>
+<table border>
+	   <caption>Enter Variables:</caption>
+	   
+	   <form>
+	   <tr><td>Radius (in cm):</td>  <td><input type="text" id="radius"></input></td></tr>
+	   
+	   <tr><td><select id="units2">    
+	           <option value="ev"> eV: </option>
+		   <option value="rad">Radians:</option>
+		   </select> </td>                     <td><input type="text" id="tvalue"></input></td> </tr>
+           </table> </form>
+	   <input type="button" value="Calculate" onclick="javascript:emitt()"></input>
+	   <input type="button" value="Reset Form"  onclick="javascript:resetemitt()"></input>
+	  <br>
+          (eV gives temperature of transverse momentum distribution,<br>
+           radian value is <i>&gamma;&theta;<sub>rms</sub></i>)
+
+          <br>
+          <br>
+
+
+	   <table border>
+	   <!-- tr><td>Radius:</td>         <td><input type="text" readonly id="radius2"></input>cm</td></tr -->
+	   <tr><td><input type="text" id="u2" readonly size="10"></input></td>    <td><input size="25" type="text" readonly id="v2"></input></td></tr>
+	   <!-- tr><td>Radians:</td>        <td><input type="text" readonly id="rads"></input></td></tr -->
+	   <tr><td>Emittance:</td>      <td><input type="text" readonly id="emitt"></input>cm-rad</td></tr>
+	   </table></form>
+	   <br><a href="index.htm"> Return to Tools and Links </a>
+<br><br><br>
+
+
+ <a name="bbu"></a><h5>Beam Breakup Instability</h5>
+<table border><form>
+	   <caption>Enter Variables:</caption>
+	   <tr><td>Beam Pulse Width (T):</td><td><input type="text" id="T"></input>ns</td></tr>
+	   <tr><td>Frequency:</td><td><input type="text" id="F"></input>MHz</td></tr>
+	   <tr><td>Magnetic Field (B):</td><td><input type="text" id="B"></input>kG</td></tr>
+	   <tr><td>Beam Current (I):</td><td><input type="text" id="I"></input>kA</td></tr>
+	   <tr><td>Number of accelerating gaps:</td><td><input type="text" id="N"></input></td></tr>
+	   <tr><td>Transverse impedance of BBU mode (Z<sub>&perp;</sub>):</td><td><input type="text" id="Z"></input>ohms/cm</td></tr>
+	   <tr><td>Quality factor of BBU mode:</td><td><input type="text" id="Q"></input></td></tr> </table>
+	   <input type="button" value="Calculate" onclick="javascript:bbu()"></input><input type="button" value="Reset Form" onclick="javascript:resetbbu()"></input>	   
+	  
+	   <br><br>
+
+           <table border>
+	   <tr><td>Time to maximum growth:</td><td><input type="text" id="t" readonly></input></td></tr>
+	   <tr><td>Delta function:</td><td><input type="text" id="delta" readonly></input></td></tr>
+	   <tr><td>Resonant Sine-wave:</td><td><input type="text" id="res" readonly></input></td></tr>
+	   <tr><td>Damped Resonant Sine-wave:</td><td><input type="text" id="dam" readonly></input></td></tr>     </table>
+          </form>
+	  <br><a href="index.htm"> Return to Tools and Links </a>
+
+          <br><br>
+
+
+<script type="text/javascript" src="scripts/beams.js">
+
+</script>
+
+
+<address>
+Copyright January 2007 by Thomas Hughes and Fiona Hughes. <br>
+</address>
+
+

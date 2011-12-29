@@ -1,0 +1,166 @@
+<html>
+<head> <title>Atomic Physics Data</title>
+<link rel="shortcut icon" href="icon2.ico" >
+</head>
+
+<body>
+
+<h4>Atomic Physics Data</h4>
+<ul><li><a href="#mass">Masses</a><br>
+	<li><a href="#ionize">Ionization Energies</a><br>
+	<li><a href="#xsec">Cross-sections</a><br>
+</h4>
+
+<br>
+<a class="center" NAME="mass"></A><h4>Atomic Masses</h4>
+<table border><form>
+	<caption>Enter Variables:</caption>
+	<tr><td>Atomic Mass (amu):</td><td><input type="text" id="amu" size="5"></input></td></tr></table>
+
+<input type="button" value="Calculate" onclick="javascript:mass()"></input>
+<input type="button" value="Reset Form" onclick="javascript:reset()"></input>
+
+<table border>
+<tr><td>Mass (kg):</td><td><input type="text" id="masskg" readonly size="40"></input></td></tr>
+</table>
+
+(Proton mass = 1.67262158e-27 kg; electron mass = 9.10938188e-31 kg)<br>
+
+
+<br><a href="index.htm"> Return to Tools and Links </a>
+<br><br><br>
+
+
+<a name="ionize"></a><h4>Ionization Energies</h4>
+       <table border>
+		<tr><td>Molecule</td>
+                    <td>eV</td></tr>
+		
+                 <tr><td>Ar</td>
+	            <td>15.8</td></tr>
+
+              
+                 <tr><td>Cs</td>
+	            <td>3.9</td></tr>
+              
+                 <tr><td>H</td>
+	            <td>13.6</td></tr>
+              
+                 <tr><td>H<sub>2</sub></td>
+	            <td>15.4</td></tr>
+
+              
+                 <tr><td>He</td>
+	            <td>24.6</td></tr>
+              
+                 <tr><td>Kr</td>
+	            <td>14.0</td></tr>
+              
+                 <tr><td>N<sub>2</sub></td>
+	            <td>15.6</td></tr>
+
+              
+                 <tr><td>Ne</td>
+	            <td>21.6</td></tr>
+              
+                 <tr><td>O<sub>2</sub></td>
+	            <td>12.1</td></tr>
+              
+                 <tr><td>SF<sub>6</sub></td>
+
+	            <td>13.42 - 15.9</td></tr>
+              
+                 <tr><td>TMAE</td>
+	            <td>6.1 (&lambda; = 200nm)</td></tr>
+
+                 <tr><td>Xe</td>
+	            <td>12.1</td></tr>
+
+              
+	</table>
+                <br>[TMAE = Tetrakis Dimethylamine Ethylene]<br>
+<br><a href="index.htm"> Return to Tools and Links </a>
+<br><br>
+
+
+<a class="center" NAME="xsec"></a><h4>Cross-sections<a href="http://rjd.web.cern.ch/rjd/cgi-bin/cross/"> (from Magboltz data at CERN)</a></h4>
+
+<li><a href="#xsec-h2">Molecular Hydrogen</a><br>
+<li><a href="#xsec-he">Helium</a><br>
+<li><a href="#xsec-ar">Argon</a><br>
+<li><a href="#xsec-n2">Molecular Nitrogen</a><br>
+<li><a href="#xsec-o2">Molecular Oxygen</a><br>
+<li><a href="#xsec-h2o">Water Vapor</a><br>
+<li><a href="#xsec-cesium">Cesium</a><br>
+<li><a href="#xsec-hg">Mercury</a><br>
+
+<br><hr />
+<a class="center" NAME="xsec-h2"></A><h4>Molecular Hydrogen:</h4>
+<img src="h2_2001.png" alt="Hydrogen" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-he"></A><h4>Helium:</h4>
+<img src="he2002.png" alt="Helium" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-ar"></A><h4>Argon:</h4>
+<img src="ar2002.png" alt="Argon" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-n2"></A><h4>Molecular Nitrogen:</h4>
+<img src="n22003.png" alt="Molecular Nitrogen" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-o2"></A><h4>Molecular Oxygen:</h4>
+<img src="ox2004.png" alt="Molecular Oxygen" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-h2o"></A><h4>Water Vapor:</h4>
+<img src="h2o2004.png" alt="Water Vapor" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-cesium"></A><h4>Cesium:</h4>
+<img src="cesium.png" alt="Cesium" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+<hr />
+<a class="center" NAME="xsec-hg"></A><h4>Mercury:</h4>
+<img src="hg2003.png" alt="Mercury" />
+<br><br>
+<li><a href="#xsec"> Back to species list</a>
+
+
+<br><br><a href="index.htm"> Return to Tools and Links </a>
+
+<!--  a name="eta"></a><h5>Eta</h5>
+	<table border>
+	<caption>Enter Variables:</caption>
+	   
+	   <form>
+	   <tr><td>&Delta;:</td>  <td><input type="text" id="delta"></input></td></tr>
+	   
+	   <tr><td>T:</td>                     <td><input type="text" id="T"></input></td> </tr>
+           </table> </form>
+	   <input type="button" value="Calculate" onclick="javascript:eta()"></input>
+	   <input type="button" value="Reset Form"  onclick="javascript:reseteta()"></input
+
+	<table border>
+           <form>
+           <tr><td>&eta;:</td><td><input type="text" id="eta" readonly></input></td></tr>
+	</form></table -->
+<br><br>
+
+
+
+<script type="text/javascript" src="scripts/atomic.js">
+</script>
+
+<address>
+Copyright January 2007 by Thomas Hughes and Fiona Hughes. <br>
+</address>

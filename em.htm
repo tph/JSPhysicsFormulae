@@ -1,0 +1,74 @@
+<html>
+<head> <title>Electromagnetic Formulae</title>
+<link rel="shortcut icon" href="icon2.ico" >
+</head>
+
+<body>
+
+<h4>Electromagnetic Formulae</h4>
+<ul><li><a href="#lwaves">Light Waves</a>
+    <li><a href="#skind">Skin Depth</a>
+		   	    </ul><br><br>
+
+
+<a name="lwaves"></a><h5>Light Waves</h5>
+<table border>
+       <caption>Enter Variables:</caption>
+              <form name="form">
+	      <tr><td><select id="choice">
+	              <option value="WL" size="8">Wavelength (m):</option>
+	              <option value="WLcm" size="8">Wavelength (cm):</option>
+		      <option value="F">Frequency (Hz):</option> </select></td>   
+		  <td><input type="text" size="8" id="num"></input></td></tr>
+
+	      <tr><td>Relative permittivity:</td> <td><input type="text" size="8" id="permit"></input></td></tr>
+	      <tr><td>Relative permeability:</td> <td><input type="text" size="8" id="permea"></input></td></tr>
+
+	      <tr><td><input type="text" id="label11" readonly></input></td> 
+	          <td><input type="text" size="30" id="result11" readonly></input></td></tr>
+              <tr><td><input type="text" id="label12" readonly></input></td>
+	          <td><input type="text" size="30" id="result12" readonly></input></td></tr>
+             
+	      </table>
+	      <input type="button" value="Calculate" onclick="javascript:lwaves()"></input>
+	      <input type="button" value="Reset Form" onclick="javascript:resetlwaves()"></input></form><br>
+	<br><a href="index.htm"> Return to Tools and Links </a>
+<br><br>
+
+<a name="skind"></a><h5>Skin depth for good conductors: <i>(2/&mu;&sigma;&omega)<sup>1/2</sup></i> in MKS</h5>
+<table border>
+       <caption>Enter Variables:</caption>
+              <form name="form">
+	      <tr><td><select id="choice2">
+	              <option value="depth">Skin depth (m):</option>
+	              <option value="dcm">Skin depth (cm):</option>
+		      <option value="F2">Frequency (Hz):</option> </select></td>   
+		  <td><input type="text" size="8" id="num2"></input></td></tr>
+
+	      <tr><td>Relative permeability:</td> <td><input type="text" size="8" id="permea2"></input></td></tr>
+	      <tr><td>Conductivity (S/m):</td> <td><input type="text" size="8" id="cond2"></input></td></tr>
+
+	      <tr><td><input type="text" id="label21" readonly></input></td> 
+	          <td><input type="text" size="30" id="result21" readonly></input></td></tr>
+              <tr><td><input type="text" id="label22" readonly></input></td>
+	          <td><input type="text" id="result22" readonly></input></td></tr>
+             
+	      </table>
+	      <input type="button" value="Calculate" onclick="javascript:skind()"></input>
+	      <input type="button" value="Reset Form" onclick="javascript:resetskind()"></input></form><br>
+(Conductivity of copper at 300K = 5.8 &times; 10<sup>7</sup> S/m)<br>
+	<br><a href="index.htm"> Return to Tools and Links </a>
+<br><br>
+
+
+
+<script type="text/javascript" src="scripts/em.js">
+
+</script>
+
+
+<address>
+Copyright 2005-2007 by Thomas Hughes and Fiona Hughes. <br>
+</address>
+
+
